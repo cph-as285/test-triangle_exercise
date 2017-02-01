@@ -19,19 +19,17 @@ namespace TriangleExercise
             var type = GetTriangleType(a, b, c);
 
             Console.WriteLine(type);
+
+            Console.ReadKey();
         }
 
-        private static TriangleTypes GetTriangleType(int a, int b, int c)
+        public static TriangleTypes GetTriangleType(int a, int b, int c)
         {
             if (a == b && b == c)
-            {
                 return TriangleTypes.Equilateral;
-            }
 
             if (a != b && b != c && a != c)
-            {
                 return TriangleTypes.Scalene;
-            }
 
             return TriangleTypes.Isosceles;
         }
